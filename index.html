@@ -17,33 +17,52 @@
 		<div class="flex players-playing-field">
 			<div class="relative">
 				<div id="name_player" class="name_player"></div>
+				<div class="number">
+					<div class="positionNumber"></div>
+				</div>
+				<div class="letters">
+					<div class="positionLetters"></div>
+				</div>
 				<div class="field">
 					<div id="field_player" class="ships"></div>
 				</div>
 			</div>
-			<div class="relative">
-				<div id="nameComputer" class="nameComputer" hidden>Компьютер</div>
-				<div class="field field-computer" hidden>
+			<div class="relative" id="field-computer_all" hidden>
+				<div id="nameComputer" class="nameComputer">Компьютер</div>
+				<div class="number computer">
+					<div class="positionNumber"></div>
+				</div>
+				<div class="letters computer">
+					<div class="positionLetters"></div>
+				</div>
+				<div class="field field-computer">
 					<div id="field_computer" class="ships"></div>
 				</div>
 			</div>
-			<span id="newGameStart" class="btn">Новая игра</span>
-			<div id="namePlayer" class="btn" hidden>
-				Введите имя
-				<input id="Name" type="text" value="Игрок">
-				<input id="getName" type="button" value="Потвердите">
-			</div>
-			<div id="Players" class="btn" hidden>
-				Выберите кто будет ходить первым?<br>
-				<div class="flex flex2">
-					<div class="players player-img" data-target="player"></div>
-					<div class="players player-computer" data-target="computer"></div>
+			<div class="newGameStart">
+				<span id="newGameStart" class="btn GameStart animation">
+					Новая игра
+				</span>
+				<span id="newProceed" class="btn GameStart animation" hidden>
+					Продолжить
+				</span>
+				<div id="namePlayer" class="btn namePlayer animation" hidden>
+					Введите имя<br>
+					<input id="Name" type="text" value="Игрок"><br>
+					<input id="getName" type="button" value="Потвердите">
 				</div>
-			</div>
-			<div id="instruction" class="instruction">
-				<div id="type_placement" class="random-placement-box" hidden>
-					<span class="btn" data-target="random">Случайное расположение кораблей</span><br>
-					<input id="Start" type="button" value="ok">
+				<div id="Players" class="btn players_choice animation" hidden>
+					Выберите кто будет ходить первым?<br>
+					<div class="flex ju-cen">
+						<div class="players player-img" data-target="player"></div>
+						<div class="players player-computer" data-target="computer"></div>
+					</div>
+				</div>
+				<div id="instruction" class="instruction">
+					<div id="type_placement" class="random-placement-box animation" hidden>
+						<span class="btn random" data-target="random">Случайное расположение кораблей</span><br>
+						<input  id="Start" type="button" value="ok" hidden>
+					</div>
 				</div>
 			</div>
 		</div>
