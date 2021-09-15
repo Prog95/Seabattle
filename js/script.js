@@ -35,8 +35,9 @@
 			let posLetters  = document.createElement('div');
 			posNumber.innerHTML = pN;
 			posLetters.innerHTML = letters[pN-1];
-			setTimeout( () => positionNumber[m].append(posNumber), 500 * pN);
-			setTimeout( () => positionLetters[m].append(posLetters), 500 * pN);
+			positionNumber[m].append(posNumber);
+			positionLetters[m].append(posLetters);
+
 
 		}
 	}
@@ -94,7 +95,7 @@
 		// размер стороны игрового поля в px
 		static FIELD_SIZE = 330;
 		// размер палубы корабля в px
-		static SHIP_SIZE = 33;
+		static SHIP_SIZE = 32.9;
 		// объект с кораблями
 		static SHIP_DATA = {
 			fourdeck: [1, 4], // ключ тип корабля, первый элемент - количество кораблей, второй элемент - сколько палуб
